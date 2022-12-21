@@ -1,5 +1,9 @@
 import discord
+from discord import Webhook, SyncWebhook
+import aiohttp
+import requests
 
+#work on webhook integration
 intents = discord.Intents.default()
 intents.message_content = True
 
@@ -17,4 +21,9 @@ async def on_message(message):
         await message.channel.send('STINKY')
         print(f'poopy has been registered')
 
-client.run('MTAzMzQ1OTkyODI0Mjg2MDEyMw.GWIRYu.FUmpKS5cQXkuzpJMg5FhSGvvY-3Ef8JU1Kw1LQ')
+webhook = SyncWebhook.from_url('https://discord.com/api/webhooks/[https://discord.com/api/webhooks/1055251923822968833/go13kfcvXVA2n0jhiRgaXDqvGOu_4KaYsJvWMr-fiNbviDGpVp8A_yAgX4KOETr51OqS]')
+webhook.send(content="Hello World")
+
+
+
+client.run('MTAzMzQ1OTkyODI0Mjg2MDEyMw.GImUKN.BTuVKWzzSqMp32nWXdrTvnPzYeksN43zWinVOY')
